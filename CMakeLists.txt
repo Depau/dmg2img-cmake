@@ -14,7 +14,7 @@ add_executable(dmg2img
         src/gpt.h
         src/mntcmd.h)
 
-target_link_libraries(dmg2img -lz -lbz2)
+target_link_libraries(dmg2img z bz2)
 
 
 project(vfdecrypt)
@@ -25,4 +25,4 @@ add_executable(vfdecrypt
         src/vfdecrypt.c
         src/vfdecrypt.h)
 
-target_link_libraries(vfdecrypt -lcrypto)
+target_link_libraries(vfdecrypt crypto)
