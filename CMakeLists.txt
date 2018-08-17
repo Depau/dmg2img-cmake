@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.4)
 
 project(dmg2img)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pie")
 set(CMAKE_C_STANDARD 11)
 
 include_directories(src)
@@ -18,6 +20,8 @@ target_link_libraries(dmg2img z bz2)
 
 
 project(vfdecrypt)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pie")
 set(CMAKE_C_STANDARD 11)
 
 include_directories(src)
