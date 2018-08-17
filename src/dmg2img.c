@@ -293,7 +293,7 @@ int main(int argc, char *argv[])
 			memcpy(partname, partname_begin, partname_end - partname_begin);
 			if (verbose >= 2) {
 				fprintf(stderr, "partition %d: begin=%d, size=%d, decoded=%d\n", i, (int)(data_begin - blkx), data_size, tmplen);
-                fprintf(stderr, "             firstsector=%ld, sectorcount=%ld\n", parts[i].FirstSectorNumber, parts[i].SectorCount);
+                fprintf(stderr, "             firstsector=%ld, sectorcount=%ld, blocksruncount=%d\n", parts[i].FirstSectorNumber, parts[i].SectorCount, parts[i].BlocksRunCount);
 				if (listparts)
 					fprintf(stderr, "             %s\n", partname);
 			} else if (listparts)
